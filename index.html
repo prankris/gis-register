@@ -17,21 +17,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
     <title>Shelby County Register of Deeds</title>
     <link rel="shortcut icon" type="image/png" href="./images/shelbyGold.png" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <!-- <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Corben|Cormorant+Garamond:600" rel="stylesheet">
-    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://js.arcgis.com/3.28/dijit/themes/claro/claro.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://js.arcgis.com/3.28/esri/css/esri.css">
     <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -40,13 +41,9 @@
 </head>
 
 <body>
-
-
     <div class="modal fade" id="loading" role="dialog" style="text-align: center;">
         <div class="modal-dialog">
-            <div class="modal-content" style="
-            background-color: transparent;
-        ">
+            <div class="modal-content" style="background-color: transparent;">
                 <div class="modal-body">
                     <img src="" id="loadingGIF" alt="loading">
                 </div>
@@ -64,7 +61,6 @@
                         While we try to keep the information timely and accurate, we make no guarantees. With respect to documents available in this application, neither the Shelby County Register’s Office, Shelby County Government, nor any of its employees
                         assume any legal liability or responsibility for the accuracy or completeness of any information disclosed. The information and documents on this Web site contain hyperlinks to information created and maintained by other government
                         organizations. Please be aware that we do not control or guarantee the accuracy, relevance, timeliness, or completeness of this outside information.
-
                     </p>
                     <div style="text-align: center">
                         <button class="btn btn-primary" onclick="disclamerClose()">Close</button>
@@ -75,16 +71,13 @@
     </div>
 
     <div class="container-fluid" style="margin-bottom: 0.9vh;">
-
-        <div class="row" id="maincontainer" style="background-image: linear-gradient(0deg, #506e23, #244300); height: 160px">
-
-
-            <div class=" col-lg-2 col-md-2 col-sm-2 hidden-xs nopadding registerImage" style="height: 100%;">
+        <div class="row" id="maincontainer" style="height: 160px">
+            <div class="registerImage" style="height: 100%;">
                 <div id="brand-logo">
                     <img id="ShelandraFord" src="./images/ford.jpg" alt="Home" />
                 </div>
             </div>
-            <div class=" col-lg-8 col-md-8 col-sm-10 nopadding" id="lowernavigation">
+            <div id="lowernavigation">
                 <nav class="navbar navbar-default" role="navigation">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse"> <span class="sr-only">Toggle navigation</span>
@@ -100,35 +93,18 @@
                     </div>
                     <div class="collapse navbar-collapse fade-in" id="navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
-
-
-
                             <li>
-                                <a href="https://www.register.shelby.tn.us/" style="color: black" target="_blank">
-                                            Home
-                                        </a>
-
+                                <a href="https://www.register.shelby.tn.us/" style="color: black" target="_blank">Home</a>
                             </li>
                             <li>
-                                <a href="https://register.shelby.tn.us/history.php" style="color: black" target="_blank">
-                                            About
-                                        </a>
-
+                                <a href="https://register.shelby.tn.us/history.php" style="color: black" target="_blank">About</a>
                             </li>
                             <li>
-                                <a href="https://www.register.shelby.tn.us/wp-contact/" style="color: black" target="_blank">
-                                            Contact
-                                        </a>
-
+                                <a href="https://www.register.shelby.tn.us/wp-contact/" style="color: black" target="_blank">Contact</a>
                             </li>
-
                             <li>
-                                <a href="https://www.fema.gov/media-library/assets/documents/3846" style="color: black" target="_blank">
-                                            FEMA
-                                        </a>
-
+                                <a href="https://www.fema.gov/media-library/assets/documents/3846" style="color: black" target="_blank">FEMA</a>
                             </li>
-
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" style="color: black" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ReGIS<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
@@ -142,26 +118,17 @@
                         </ul>
                     </div>
                     <div class="lower-nav" id="lower">
-
                         <div class="pull-left fade-in" id="RegisterTitle" style="margin-top: -20px;">
                             <div class="title" style="font-family: 'Lucida Sans Unicode'; text-align: left; color: white">
                                 <span style="font-size: 33px;font-family: 'Corben', 'Lucida Sans Unicode', 'Arial', 'sans-serif', cursive;">Shelandra Y. Ford</span>
                             </div>
-
-                            <div style="color: #DFBF86; font-size: 33px; font-family: 'Cormorant Garamond', serif;">Shelby County Register of Deeds</div>
+                            <div style="color: #FCEFC1; font-size: 33px; font-family: 'Cormorant Garamond', serif;">Shelby County Register of Deeds</div>
                         </div>
-
-
-
-
                     </div>
                 </nav>
-
             </div>
-            <div class=" col-lg-2 col-md-2 .hidden-sm-down hidden-xs nopadding" id="shelbybackground" style="height: 100%;">
+                <div id="shelbybackground" style="height: 100%;">
             </div>
-
-
         </div>
 
     </div>
@@ -172,10 +139,7 @@
 
                 <div class="col-xs-12 col-md-8 column pull-right nopadding" id="mapContent">
                     <div id="main" style="position: relative;padding-top: 0px;">
-                        <div id="viewDiv" class="mapdiv claro">
-
-                        </div>
-                        <a href="javascript:" style="position: absolute; top: 110px;right: 40px;" id="goBottom"><i class="icon-chevron-down"></i></a>
+                        <div id="viewDiv" class="mapdiv claro"></div>
                         <div class="btn-group" style="position: absolute; top: 0px; left: 35%" id="mapExtensions">
                             <div class="btn  nav-buttons" id="zoomIn" data-toggle="tooltip" data-placement="top" title="Zoom In"><span class="glyphicon glyphicon-zoom-in"></span></div>
                             <div class="btn  nav-buttons" id="zoomOut" data-toggle="tooltip" data-placement="top" title="Zoom Out"><span class="glyphicon glyphicon-zoom-out"></span></div>
@@ -183,23 +147,17 @@
                             <div class="btn  nav-buttons" id="clearGraphics" data-toggle="tooltip" data-placement="top" title="Clear Graphics"><span class="glyphicon glyphicon-erase"></span></div>
                             <div class="btn  nav-buttons" id="measurement" data-toggle="collapse" data-target="#demo"><i class="fas fa-pencil-ruler" data-toggle="tooltip" data-placement="top" title="Measurement Tools"></i></div>
                             <div class="btn  nav-buttons" id="print" data-toggle="tooltip" data-placement="top" title="Print Details"><span class="glyphicon glyphicon-print"></span></div>
-
                         </div>
                         <button class="openbtn" id="sidebutton" onclick="openNav()" style="position: absolute; top:350px; left: -10px; margin-right: 20px"><span id="arrow" class="glyphicon glyphicon-arrow-left"></span></button>
-
                         <span id="info" style="position:absolute; right:20px; bottom:20px; color:#000; z-index:50; background-color: white; padding: 5px"></span>
                         <div id="demo" class="collapse" style="position:absolute; right:40%; top:40px; width: 200px; background-color: gainsboro; border-radius: 10px">
                             <div id="measurementWidget"></div>
                         </div>
                     </div>
-
                 </div>
-
 
                 <div id="contactBlock" class="col-xs-12 col-md-4 column nopadding pull-left" style=" overflow: auto;">
                     <div id="mySidebar" class="sidebar">
-                        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> -->
-
                         <div style="height: 100%;padding: 15px" id="contentDetail" style="background-color: #D9DEE6;">
                             <div id="contentPanel">
                                 <ul class="nav nav-tabs">
@@ -216,22 +174,14 @@
 
                                 <div class="tab-content" style="background-color: #D9DEE6;">
                                     <div role="tabpanel" class="tab-pane active" id="Search">
-
-
                                         <div class="panel-group" id="accordion">
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
-
                                                     <h4 class="panel-title">
-
                                                         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                                             <i class="more-less glyphicon glyphicon-minus"></i> Search By Address
                                                         </a>
-
-
                                                     </h4>
-
-
                                                 </div>
                                                 <div id="collapseOne" class="panel-collapse collapse in">
                                                     <div class="panel-body">
@@ -240,37 +190,29 @@
                                                                 <input type="text" class="form-control" placeholder="Enter StreetNumber, Street Name, City" id="searchAddress" name='searchAddress' data-toggle="tooltip" data-placement="right" title="Please Enter Street Number, street Name and City,  zipcode optional"
                                                                     required />
                                                                 <span class="input-group-btn" style="margin-left: 10px">
-                                                                                 <button class="btn btn-default" onclick="addressSubmit()" type="button" id="addressSubmit">Submit</button>
-                                                                            </span>
+                                                                    <button class="btn btn-default" onclick="addressSubmit()" type="button" id="addressSubmit">Submit</button>
+                                                                </span>
                                                             </div>
                                                         </div>
-
-
-
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="panel panel-default">
                                                 <div class="panel-heading">
-
                                                     <h4 class="panel-title inline">
                                                         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
                                                             <i class="more-less glyphicon glyphicon-plus"></i> Search By Owner Name
                                                         </a>
-
                                                     </h4>
-
-
                                                 </div>
                                                 <div id="collapseTwo" class="panel-collapse collapse">
                                                     <div class="panel-body">
                                                         <div id="ownerdetails">
-
                                                             <div class="input-group">
                                                                 <input type="text" class="form-control" placeholder="Owner Name(LastName FirstName)" id="OwnerName" name='OwnerName' required />
                                                                 <span class="input-group-btn">
-                                                                                         <button class="btn btn-default" onclick="ownerNameSubmit()" type="button" id="ownerNameSubmit">Submit</button>
-                                                                                    </span>
+                                                                    <button class="btn btn-default" onclick="ownerNameSubmit()" type="button" id="ownerNameSubmit">Submit</button>
+                                                                </span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -278,15 +220,11 @@
                                             </div>
                                             <div class="panel panel-default">
                                                 <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-
                                                     <h4 class="panel-title inline">
                                                         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
                                                             <i class="more-less glyphicon glyphicon-plus"></i> Search By Parcel
                                                         </a>
-
-
                                                     </h4>
-
                                                 </div>
                                                 <div id="collapseThree" class="panel-collapse collapse">
                                                     <div class="panel-body">
@@ -294,74 +232,55 @@
                                                             <div class="input-group">
                                                                 <input type="text" class="form-control" placeholder="Parcel ID" id="parcelNumber" name='parcelNumber' required />
                                                                 <span class="input-group-btn">
-                                                                                         <button class="btn btn-default" onclick="parcelNumberSubmit()" type="button" id="parcelNumberSubmit">Submit</button>
-                                                                                    </span>
+                                                                    <button class="btn btn-default" onclick="parcelNumberSubmit()" type="button" id="parcelNumberSubmit">Submit</button>
+                                                                </span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
 
-
-
-
-
                                             <div class="panel panel-default">
                                                 <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
-
                                                     <h4 class="panel-title inline">
                                                         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseOne">
                                                             <i class="more-less glyphicon glyphicon-plus"></i> Search By Tax Map
                                                         </a>
-
-
                                                     </h4>
-
                                                 </div>
                                                 <div id="collapseFour" class="panel-collapse collapse">
                                                     <div class="panel-body">
                                                         <div id="taxMapdetails">
                                                             <form id="myform">
-
-                                                                <label for="TaxMApId">Tax Map ID:</label>
-                                                                <input type="text" class="form-control" name="TaxMApId" id="TaxMApId" /><br />
-
-                                                                <!-- <input type="radio" name="mapType" id="radioOne" value="PDF" /> <label for="radioOne">PDF</label><br /> -->
-                                                                <!-- <input type="radio" name="mapType" id="radioTwo" value="TIFF" /> <label for="radioTwo">TIFF</label> <br /> -->
-
-                                                                <button onclick="searchTaxMap()">
-                                                                    submit
-                                                                    
-                                                                </button>
+                                                                <div class="input-group">
+                                                                    <input type="text" class="form-control" placeholder="Tax Map ID" name="TaxMApId" id="TaxMApId" /><br />
+                                                                    <span class="input-group-btn">
+                                                                        <button class="btn btn-default" onclick="searchTaxMap()">Submit</button>
+                                                                    </span>
+                                                                </div>
                                                             </form>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-
-
-
                                         </div>
+
                                         <div id="extraMembers"></div>
 
                                         <div>
-                                            <h2 style="color: black">Welcome</h2><br>
+                                            <h2 style="color: black">Welcome</h2>
                                             <p style="text-align: justify; color: black">
                                                 As your Shelby County Register of Deeds, I am pleased to provide this additional service to our customers. With this map function our customers can search by address, owner, or parcel number any property in Shelby County. Results will provide an aerial
                                                 view of the property, surrounding parcels, assessment information, sales data, deeds, and property tax information for Shelby County as well as the muncipality in which the parcel is located. We welcome
                                                 questions, comments, and concerns at
                                                 <a href="mailto:register@shelbycountytn.gov">register@shelbycountytn.gov</a>. As with all of our web services, <span>&ldquo;</span>Excellent customer service and care is our priority.<span>&rdquo;</span>
                                             </p>
-
-                                            <br />
-
                                             <p style="text-align: justify; color: black">All maps and data made accessible in this website are subject to <a id="myLink" href="#" onclick="MyDisclaimer();return false;">Disclaimer</a>.</p>
-
                                         </div>
 
                                     </div>
-                                    <div role="tabpanel" class="tab-pane" id="Details">
 
+                                    <div role="tabpanel" class="tab-pane" id="Details">
                                         <div id="infoWidget">
                                             <h3>Please select a Parcel on the map or use search option</h3>
                                         </div>
@@ -463,89 +382,44 @@
                                             <div id="CityTax">
                                                 <a href="#" id="CityTaxInfo" target="_blank">City Tax Info</a></div>
                                             <div id="CountyTax"><a href="#" id="CountyTaxInfo" target="_blank">County Tax Info</a></div>
-
-
                                             <div id="GoogleView"><a href="#" id="GoogleViewInfo" target="_blank">Google View</a></div>
-
-
 
                                             <!-- <div id="RCSS">
                                                 <a href="https://register.shelby.tn.us/index.php?recent=recent" target="_blank">Recent and Comparable Sales Search</a></div> -->
                                             <div id="SMRP"><a href="https://register.shelby.tn.us/search/index.php" target="_blank">Search Most Recent Property Records</a></div>
-
-
-                                            <table id="salesInformation" style="margin-top: 2vh; width: 100%;">
-
-                                            </table>
-
+                                            
+                                            <table id="salesInformation" style="margin-top: 2vh; width: 100%;"></table>
                                         </div>
                                     </div>
                                     <div role="tabpanel" class="tab-pane" id="Layers">
                                         <div id="layerlist"></div>
-
                                         <h2>Historic Aerials</h2>
-
                                         <div id="layerlist1"></div>
-
                                     </div>
-
-
-
-
-
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
     </div>
     <div id="copyright" style="text-align: center">
-        <p> <span style="font-size: 20px;" class="copyright">&copy;</span> 2019 SHELANDRA Y FORD, SHELBY COUNTY REGISTER OF DEEDS</p>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> SHELANDRA Y FORD, SHELBY COUNTY REGISTER OF DEEDS</p>
     </div>
-    <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
-
-
 
     <script>
         $(window).resize(function() {
-
             if (window.innerWidth == 768) {
                 document.getElementById("mobileRegister").style.display = "none";
-
-
-
             } else {
                 document.getElementById("mobileRegister").style.display = "block";
-
-
             }
 
             if (window.innerWidth <= 768) {
                 document.getElementById("contactBlock").style.display = "block";
             }
-
-
-
-
-
-
-
-
-
-            // if (window.innerWidth <= 1300) {
-            //     document.getElementById("ShelandraFord").style.width = "100%";
-            // } else {
-            //     document.getElementById("ShelandraFord").style.width = "70%";
-            // }
-
         });
-
-
-
 
         var sidebaropened = true;
         var x = window.matchMedia("(max-width: 991px)");
@@ -555,8 +429,6 @@
         var b = window.matchMedia("(min-height: 894px)");
         var c = window.matchMedia("(min-height: 856px)");
         var d = window.matchMedia("(min-height: 813px)");
-
-
 
         myFunction(x);
         myFunction1(y);
@@ -583,7 +455,6 @@
 
         function myFunction5(c) {
             if (c.matches) {
-
                 document.getElementById("main").style.height = "74vh";
                 document.getElementById("contactBlock").style.height = "74vh";
             }
@@ -591,7 +462,6 @@
 
         function myFunction4(b) {
             if (b.matches) {
-
                 document.getElementById("main").style.height = "75vh";
                 document.getElementById("contactBlock").style.height = "75vh";
             }
@@ -599,7 +469,6 @@
 
         function myFunction3(a) {
             if (a.matches) {
-
                 if (window.innerWidth <= 991) {
                     document.getElementById("main").style.height = "73vh";
                     document.getElementById("contactBlock").style.height = "auto";
@@ -608,11 +477,8 @@
                     document.getElementById("contactBlock").style.height = "65vh";
                     document.getElementById("sidebutton").style.top = "150px";
                 }
-
             }
         }
-
-
 
         function myFunction2(z) {
             if (z.matches) {
@@ -633,7 +499,6 @@
             }
         }
 
-
         function myFunction1(y) {
             if (y.matches) {
                 if (window.innerWidth <= 520) {
@@ -641,15 +506,11 @@
 
                 } else {
                     document.getElementById("mapExtensions").style.left = "20%";
-
                 }
 
                 document.getElementById("shelbybackground").style.backgroundImage = "none";
 
-
-
                 document.getElementById("lower").style.display = "none";
-
 
                 document.getElementById("RegisterTitle").style.display = "none";
 
@@ -666,8 +527,6 @@
                 document.getElementById("mobiletitle").style.display = "none";
 
                 document.getElementById("shelbybackground").style.backgroundImage = "url('./images/shelbyGold.png')";
-
-
             }
         }
 
@@ -678,27 +537,14 @@
                 document.getElementById("lowernavigation").classList.add("col-md-10");
                 document.getElementById("contactBlock").style.height = "auto";
                 document.getElementById("sidebutton").style.display = "none";
-
-                document.getElementById("goBottom").style.display = "block";
-
-
             } else {
-
-
-
                 document.getElementById("shelbybackground").style.display = "block";
                 document.getElementById("lowernavigation").classList.remove("col-md-10");
                 document.getElementById("lowernavigation").classList.add("col-md-8");
-
-
                 document.getElementById("contactBlock").style.height = "78vh";
                 document.getElementById("sidebutton").style.display = "block";
-
-                document.getElementById("goBottom").style.display = "none";
             }
         }
-
-
 
         $('#sidebutton').on('click', function() {
             $('#mapContent').toggleClass('col-md-8 col-md-12');
@@ -710,58 +556,34 @@
         }
 
         function openNav() {
-
-
-
             if (sidebaropened) {
                 sidebaropened = false;
 
-
-
-
                 document.getElementById("contactBlock").style.display = "none";
-
-
                 document.getElementById("arrow").classList.remove("glyphicon-arrow-left");
                 document.getElementById("arrow").classList.add("glyphicon-arrow-right");
-
             } else {
                 sidebaropened = true;
-
-
                 document.getElementById("arrow").classList.remove("glyphicon-arrow-right");
                 document.getElementById("arrow").classList.add("glyphicon-arrow-left");
 
                 setTimeout(function() {
                     document.getElementById("contactBlock").style.display = "block";
                 }, 500);
-
             }
-
         }
 
         function searchTaxMap() {
-
-
             var TaxMapID = document.getElementById("TaxMApId").value;
+
             if (document.getElementById("TaxMApId").value != "") {
-
-
                 window.open("http://register.shelby.tn.us/taximg.php?imgtype=pdf&map=" + TaxMapID);
-
-
-
             } else {
                 alert("enter TaxMapID");
             }
-
-
-
         }
 
         $(document).ready(function() {
-
-
             $("#loading").modal({
                 show: false,
                 backdrop: 'static'
@@ -776,26 +598,6 @@
 
             $('.panel-group').on('hidden.bs.collapse', toggleIcon);
             $('.panel-group').on('shown.bs.collapse', toggleIcon);
-
-            $(window).scroll(function() {
-                if ($(this).scrollTop() >= 70) { // If page is scrolled more than 50px
-                    $('#return-to-top').fadeIn(200); // Fade in the arrow
-                } else {
-                    $('#return-to-top').fadeOut(200); // Else fade out the arrow
-                }
-            });
-            $('#return-to-top').click(function() { // When arrow is clicked
-                $('body,html').animate({
-                    scrollTop: 0 // Scroll to top of body
-                }, 500);
-            });
-
-
-            $('#goBottom').click(function() { // When arrow is clicked
-                $('body,html').animate({
-                    scrollTop: $(document).height() + $(window).height()
-                }, 1500);
-            });
 
         });
 
@@ -817,13 +619,10 @@
     </script>
 
 
-
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://js.arcgis.com/3.28/"></script>
     <script type="text/javaScript" src="./script.js"></script>
-
-
 
 </body>
 
